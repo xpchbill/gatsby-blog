@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
       <DocumentTitle title={config.blogTitle}>
         <div>
           <Header></Header>
-          <ul>
+          <ul className="homelist">
             {pageLinks}
           </ul>
         </div>

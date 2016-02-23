@@ -1,8 +1,8 @@
 import Typography from 'typography'
 
 const options = {
-  baseFontSize: '18px',
-  baseLineHeight: '27px',
+  baseFontSize: '14px',
+  baseLineHeight: '25px',
   modularScales: [
     {
       scale: 'minor third',

@@ -1,23 +1,22 @@
-import React from 'react'
-import access from 'safe-access'
-import { Link } from 'react-router'
-import { link } from 'gatsby-helpers'
-import { rhythm } from 'utils/typography'
-import { prune, include as includes } from 'underscore.string'
+import React from "react";
+import moment from "moment";
+import access from "safe-access";
+import { Link } from "react-router";
+import { link } from "gatsby-helpers";
+import { rhythm } from "utils/typography";
+import { prune, include as includes } from "underscore.string";
 
+import "../css/homeitem.less";
 class HomeItem extends React.Component {
   render () {
     const { page } = this.props;
-    const title = access(page, 'data.title') || page.path;
+    const title = access(page, "data.title") || page.path;
+    console.log();
     return (
-      <li
-        style={{
-          marginBottom: rhythm(1/4),
-        }}
-      >
+      <li className="home-item">
         <Link to={link(page.path)}>{title}</Link>
-        <br/>
-        {prune(page.data.body.replace(/<[^>]*>/g, ''), 200)}
+        <p>{moment(page.data.date).format('MMMM-D-YYYY')}</p>
+        <p>{prune(page.data.body.replace(/<[^>]*>/g, ""), 200)}</p>
       </li>
     )
   }

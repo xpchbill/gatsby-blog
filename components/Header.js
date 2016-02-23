@@ -7,7 +7,7 @@ class Header extends React.Component {
     return (
       <header className="flx-header">
         <div className="bx-xl-1-8">
-          <img src="./bill.jpg"/>
+          <span className="head-photo"><img src="./bill.jpg"/></span>
         </div>
         <div className="bx-xl-7-8">
           <strong>{config.authorName}</strong>
