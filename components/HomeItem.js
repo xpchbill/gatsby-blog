@@ -6,7 +6,7 @@ import { link } from "gatsby-helpers";
 import { rhythm } from "utils/typography";
 import { prune, include as includes } from "underscore.string";
 
-import "../css/homeitem.less";
+import "../css/homeitem.css";
 class HomeItem extends React.Component {
   render () {
     const { page } = this.props;

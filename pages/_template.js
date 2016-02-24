@@ -5,7 +5,7 @@ import { link } from 'gatsby-helpers'
 import { rhythm, fontSizeToMS } from 'utils/typography'
 import { config } from 'config'
 
-import '../css/styles.less'
+import '../css/styles.css'
 
 class Template extends React.Component {
   render () {

@@ -1,0 +1,10 @@
+:root {
+  --fontSize: 14px;
+  --mainColor: #333;
+  --highlightColor: hwb(190, 35%, 20%);
+}
+
+.foo {
+  display: flex;
+  font-size: calc(var(--fontSize) * 2 + 6px);
+}

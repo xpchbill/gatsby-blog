@@ -1,14 +1,5 @@
-@import "grid.less";
-
 .flx-header{
   margin-bottom: 60px;
-  .bx-flex();
-  > div {
-    .bx-col();
-  }
-  p {
-    margin: 0px;
-  }
   .head-photo {
     width: 80px;
     height: 80px;

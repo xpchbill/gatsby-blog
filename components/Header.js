@@ -1,7 +1,7 @@
 import React from "react";
 import { config } from "config";
 
-import "../css/header.less";
+import "../css/header.css";
 class Header extends React.Component {
   render() {
     return (
