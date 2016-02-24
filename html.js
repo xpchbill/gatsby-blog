@@ -1,7 +1,6 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { link } from 'gatsby-helpers'
-import { TypographyStyle } from 'utils/typography'
 
 export default class Html extends React.Component {
   render () {
@@ -27,7 +26,6 @@ export default class Html extends React.Component {
           />
           <title>{this.props.title}</title>
           <link rel="shortcut icon" href={favicon} />
-          <TypographyStyle/>
           {cssLink}
         </head>
         <body className="landing-page">

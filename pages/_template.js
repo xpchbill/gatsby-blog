@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router'
 import { Container } from 'react-responsive-grid'
 import { link } from 'gatsby-helpers'
-import { rhythm, fontSizeToMS } from 'utils/typography'
 import { config } from 'config'
 
 import '../css/styles.css'
@@ -47,12 +46,7 @@ class Template extends React.Component {
     //   )
     // }
     return (
-      <Container
-        style={{
-          maxWidth: rhythm(24),
-          padding: `${rhythm(2)} ${rhythm(1/2)}`,
-        }}
-      >
+      <Container>
         {header}
         {children}
       </Container>

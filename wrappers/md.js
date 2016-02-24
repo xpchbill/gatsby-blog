@@ -3,7 +3,6 @@ import moment from 'moment'
 import DocumentTitle from 'react-document-title'
 import { link } from 'gatsby-helpers'
 import ReadNext from '../components/ReadNext'
-import { rhythm } from 'utils/typography'
 import { config } from 'config'
 
 import '../css/zenburn.css'
@@ -18,31 +17,13 @@ class MarkdownWrapper extends React.Component {
         <div className="markdown">
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.body }}/>
-          <em
-            style={{
-              display: 'block',
-              marginBottom: rhythm(2),
-            }}
-          >
+          <em>
             Posted {moment(post.date).format('MMMM D, YYYY')}
           </em>
-          <hr
-            style={{
-              marginBottom: rhythm(2),
-            }}
-          />
+          <hr/>
           <ReadNext post={post} pages={route.pages} />
           <p>
-            <img
-              src={link('/bill.jpg')}
-              style={{
-                float: 'left',
-                marginRight: rhythm(1/4),
-                marginBottom: 0,
-                width: rhythm(2),
-                height: rhythm(2),
-              }}
-            />
+            <img src={link('/bill.jpg')}/>
             <strong>{config.authorName}</strong> lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
           </p>
         </div>
