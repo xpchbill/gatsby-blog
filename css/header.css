@@ -16,7 +16,7 @@
     width: 5vr;
   }
   & > div:first-child {
-    lost-column: 1/6 0 0px flex;
+    lost-column: 1/6 0 20px flex;
   }
   & > div:last-child {
     lost-column: 5/6 flex;

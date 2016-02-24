@@ -1,11 +1,14 @@
-@import "normalize.css/normalize.css";
+@import "~normalize.css/normalize.css";
 @import "./vars.css";
-
 
 body {
   color: gray(50);
   padding: 2rem;
   font: 16px/1.8 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
 }
 h1 {
   font-size: 1.5vr;
