@@ -1,30 +1,30 @@
-@import "~normalize.css/normalize.css";
+@import "normalize.css/normalize.css";
+@import "./vars.css";
+
 
 body {
-  font: 18px/1.4 sans-serif;
-}
-@custom-selector :--headings h1, h2, h3, h4, h5, h6;
-:--headings, p {
-  margin: 0;
-  padding: 0;
+  color: gray(50);
+  padding: 2rem;
+  font: 16px/1.8 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
 }
 h1 {
-  font-size: 2.5vr;
-}
-h2 {
-  font-size: 2vr;
-}
-h3 {
   font-size: 1.5vr;
 }
-h4 {
+h2 {
+  font-size: 1.3vr;
+}
+h3 {
   font-size: 1vr;
+}
+h4 {
+  font-size: 0.8vr;
 }
 ul {
   margin: 0;
   padding: 0;
 }
 a {
+  color: gray(50);
   text-decoration: none;
   &:hover {
     color: red;

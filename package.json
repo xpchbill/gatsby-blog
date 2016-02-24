@@ -51,6 +51,7 @@
     "postcss-loader": "^0.8.1",
     "postcss-url": "^5.1.1",
     "postcss-vertical-rhythm": "^1.1.5",
+    "react-disqus-thread": "^0.3.1",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.0.1",

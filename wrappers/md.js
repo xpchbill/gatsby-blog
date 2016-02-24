@@ -4,6 +4,7 @@ import DocumentTitle from 'react-document-title'
 import { link } from 'gatsby-helpers'
 import ReadNext from '../components/ReadNext'
 import { config } from 'config'
+import DisqusThread from 'react-disqus-thread'
 
 import '../css/zenburn.css'
 
@@ -22,10 +23,11 @@ class MarkdownWrapper extends React.Component {
           </em>
           <hr/>
           <ReadNext post={post} pages={route.pages} />
-          <p>
-            <img src={link('/bill.jpg')}/>
-            <strong>{config.authorName}</strong> lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
-          </p>
+          <DisqusThread
+            shortname="Bill"
+            title={post.title}
+            url={"http://bricolage.io#{@props.page.path}"}
+          />
         </div>
       </DocumentTitle>
     )

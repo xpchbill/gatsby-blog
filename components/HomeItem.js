@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import { link } from "gatsby-helpers";1
 import { prune, include as includes } from "underscore.string";
 
-import "../css/homeitem.css";
+import "../css/home-item.css";
 class HomeItem extends React.Component {
   render () {
     const { page } = this.props;
@@ -14,8 +14,8 @@ class HomeItem extends React.Component {
     return (
       <li className="home-item">
         <h3><Link to={link(page.path)}>{title}</Link></h3>
-        <p>{moment(page.data.date).format('MMMM-D-YYYY')}</p>
-        <p>{prune(page.data.body.replace(/<[^>]*>/g, ""), 200)}</p>
+        <p className="home-item-status">{moment(page.data.date).format('YYYY-MM-D')}</p>
+        <p className="home-item-content">{prune(page.data.body.replace(/<[^>]*>/g, ""), 340)}</p>
       </li>
     )
   }
