@@ -6,11 +6,11 @@ class Header extends React.Component {
   render() {
     return (
       <header className="flx-header">
-        <div className="bx-xl-1-8">
-          <span className="head-photo"><img src="./bill.jpg"/></span>
+        <div>
+          <span className="hd-photo"><img src="./bill.jpg"/></span>
         </div>
-        <div className="bx-xl-7-8">
-          <strong>{config.authorName}</strong>
+        <div>
+          <h1>{config.authorName}</h1>
           <p>FEE</p>
         </div>
       </header>

@@ -13,7 +13,7 @@ class HomeItem extends React.Component {
     console.log();
     return (
       <li className="home-item">
-        <Link to={link(page.path)}>{title}</Link>
+        <h3><Link to={link(page.path)}>{title}</Link></h3>
         <p>{moment(page.data.date).format('MMMM-D-YYYY')}</p>
         <p>{prune(page.data.body.replace(/<[^>]*>/g, ""), 200)}</p>
       </li>

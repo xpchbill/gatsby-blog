@@ -1,11 +1,32 @@
-:root {
-  --fontSize: 14px;
-  --mainColor: #333;
-  --highlightColor: hwb(190, 35%, 20%);
-}
+@import "~normalize.css/normalize.css";
 
-.foo {
-  display: flex;
-  font-size: calc(var(--fontSize) * 2 + 6px);
-  lost-column: 1/3;
+body {
+  font: 18px/1.4 sans-serif;
+}
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+:--headings, p {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 2.5vr;
+}
+h2 {
+  font-size: 2vr;
+}
+h3 {
+  font-size: 1.5vr;
+}
+h4 {
+  font-size: 1vr;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    color: red;
+  }
 }
