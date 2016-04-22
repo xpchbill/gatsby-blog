@@ -23,7 +23,7 @@ gulp.task("gatsby.build", shell.task([
 ]));
 
 gulp.task("ghPages.pushToRepo", function() {
-  return gulp.src(["**/*", "!node_modules/**", "!.publish/**","!public/**"])
+  return gulp.src(["**/*", "!node_modules/**", "!.publish/**", "!.git/**", "!public/**"])
     .pipe(ghPages({
       remoteUrl: "https://github.com/xpchbill/gatsby-blog.git",
       branch: "master",
