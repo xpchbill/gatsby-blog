@@ -16,22 +16,21 @@ gulp.task("dev", shell.task([
 ]));
 
 gulp.task("deploy.github", function(done) {
-  return runSeq("gatsby.build", "ghPages.commitRepo", "ghPages.github", done);
+  return runSeq("gatsby.build", "ghPages.pushToRepo", "ghPages.github", done);
 });
 
 gulp.task("gatsby.build", shell.task([
   "gatsby build"
 ]));
 
-
-gulp.task("ghPages.commitRepo", function() {
+gulp.task("ghPages.pushToRepo", function() {
   return gulp.src("./**/*")
     .pipe(ghPages({
       remoteUrl: "https://github.com/xpchbill/gatsby-blog.git",
       branch: "master",
       message: "Deploy commit - blog source.",
       push: true,
-      force: true
+      force: false
     }));
 });
 
