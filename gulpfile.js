@@ -2,7 +2,6 @@ var gulp = require("gulp");
 var shell = require("gulp-shell");
 var runSeq = require("run-sequence");
 var ghPages = require("gulp-gh-pages");
-
 var fs = require("fs");
 var yaml = require("js-yaml");
 var prompt = require("prompt");
