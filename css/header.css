@@ -2,7 +2,7 @@
 
 .flx-header{
   margin-bottom: 1vr;
-  padding-bottom: 2vr;
+  padding-bottom: 1vr;
   border-bottom: 1px solid gray(230);
   lost-flex-container: row;
   & .hd-photo {

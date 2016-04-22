@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { prune, include as includes } from 'underscore.string'
-import find from 'lodash/find'
+import {find, includes} from 'lodash'
 
 class ReadNext extends React.Component {
   render () {
@@ -21,7 +20,7 @@ class ReadNext extends React.Component {
       )
       // Create pruned version of the body.
       const html = nextPost.data.body
-      const body = prune(html.replace(/<[^>]*>/g, ''), 200)
+      const body = html.replace(/<[^>]*>/g, '')
 
       return (
         <div>

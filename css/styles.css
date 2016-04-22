@@ -1,4 +1,3 @@
-@import "~normalize.css/normalize.css";
 @import "./vars.css";
 
 body {
@@ -6,7 +5,8 @@ body {
   padding: 2rem;
   font: 16px/1.8 'PT Serif', 'STZhongsong', '华文中宋', 'Microsoft Yahei', serif;
 }
-h1, h2, h3, h4, h5, h6 {
+
+:--headers {
   margin: 0;
   padding: 0;
 }
@@ -32,4 +32,12 @@ a {
   &:hover {
     color: red;
   }
+}
+
+blockquote {
+  padding-left: 16.875px;
+  border-left: 6px solid lightgray;
+  margin-left: 10.875px;
+  margin-right: 0;
+  padding-right: 0;
 }

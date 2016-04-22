@@ -2,7 +2,7 @@ import React from "react";
 import { config } from "config";
 
 import "../css/header.css";
-class Header extends React.Component {
+export default class Header extends React.Component {
   render() {
     return (
       <header className="flx-header">
@@ -17,5 +17,3 @@ class Header extends React.Component {
     )
   }
 }
-
-export default Header

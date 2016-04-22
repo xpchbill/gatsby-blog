@@ -1,8 +1,13 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
-import { link } from 'gatsby-helpers'
+import { prefixLink } from 'gatsby-helpers'
 
 export default class Html extends React.Component {
+
+  static propTypes = {
+    title: React.PropTypes.string
+  }
+
   render () {
     const { favicon, body } = this.props
     let title = DocumentTitle.rewind()
@@ -12,7 +17,7 @@ export default class Html extends React.Component {
 
     let cssLink
     if (process.env.NODE_ENV === 'production') {
-      cssLink = <link rel="stylesheet" href={link('/styles.css')} />
+      cssLink = <link rel="stylesheet" href={prefixLink('/styles.css')} />
     }
 
     return (
@@ -30,17 +35,9 @@ export default class Html extends React.Component {
         </head>
         <body className="landing-page">
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />
-          <script src={link('/bundle.js')}/>
+          <script src={prefixLink('/bundle.js')}/>
         </body>
       </html>
     )
   }
 }
-
-Html.propTypes = {
-  body: React.PropTypes.string,
-  favicon: React.PropTypes.string,
-  title: React.PropTypes.string,
-}
-
-Html.defaultProps = { body: '' }
